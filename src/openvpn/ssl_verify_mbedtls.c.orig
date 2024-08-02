@@ -272,7 +272,7 @@ asn1_buf_to_c_string(const mbedtls_asn1_buf *orig, struct gc_arena *gc)
     {
         if (orig->p[i] == '\0')
         {
-            return string_alloc("ERROR: embedded null value", gc);
+            return "ERROR: embedded null value";
         }
     }
     val = gc_malloc(orig->len+1, false, gc);
